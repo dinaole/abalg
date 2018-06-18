@@ -23,4 +23,8 @@ extension String {
         let lower = range.lowerBound, upper = range.upperBound
         return self[self.index(lower)..<self.index(upper)]
     }
+    
+    public func reversedStr() -> String {
+        return String(self.reversed())
+    }
 }

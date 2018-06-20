@@ -102,7 +102,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		EF4D978220D4B89E00DBA63F /* LC-M */ = {
+		EF4D978220D4B89E00DBA63F /* lm */ = {
 			isa = PBXGroup;
 			children = (
 				EF4D977E20D4909300DBA63F /* IPtoCidr.swift */,
@@ -112,7 +112,7 @@
 				EF4D978720D56CF800DBA63F /* CheapestFlight.swift */,
 				EFE9938620D9D3A500E24E63 /* MiniParser.swift */,
 			);
-			path = "LC-M";
+			path = lm;
 			sourceTree = "<group>";
 		};
 		EF679A8720D2CE520027F3AC /* Utility */ = {
@@ -123,7 +123,7 @@
 			path = Utility;
 			sourceTree = "<group>";
 		};
-		EF679A8E20D333F10027F3AC /* LC-H */ = {
+		EF679A8E20D333F10027F3AC /* lh */ = {
 			isa = PBXGroup;
 			children = (
 				EF679A7D20D2193A0027F3AC /* TextJustify.swift */,
@@ -132,7 +132,7 @@
 				EF679A8C20D30BC60027F3AC /* PalindromePairs.swift */,
 				EF20B4D420D76250001D70BD /* RegExMatching.swift */,
 			);
-			path = "LC-H";
+			path = lh;
 			sourceTree = "<group>";
 		};
 		EF9E577420D202D7007A8615 = {
@@ -158,10 +158,10 @@
 			children = (
 				EF9E578120D202D7007A8615 /* alg.h */,
 				EF9E578220D202D7007A8615 /* Info.plist */,
-				EF4D978220D4B89E00DBA63F /* LC-M */,
-				EFB4BDA520D42C3A00773053 /* Others */,
+				EF4D978220D4B89E00DBA63F /* lm */,
+				EFB4BDA520D42C3A00773053 /* mixed */,
 				EF679A8720D2CE520027F3AC /* Utility */,
-				EF679A8E20D333F10027F3AC /* LC-H */,
+				EF679A8E20D333F10027F3AC /* lh */,
 				EFB4BDA320D3732200773053 /* Misc.swift */,
 			);
 			path = alg;
@@ -177,7 +177,7 @@
 			path = algTests;
 			sourceTree = "<group>";
 		};
-		EFB4BDA520D42C3A00773053 /* Others */ = {
+		EFB4BDA520D42C3A00773053 /* mixed */ = {
 			isa = PBXGroup;
 			children = (
 				EF679A7920D204BE0027F3AC /* Trie.swift */,
@@ -186,9 +186,9 @@
 				EF4D977C20D48AA300DBA63F /* BuddyList.swift */,
 				EF20B4D220D6F373001D70BD /* RoundPrice.swift */,
 				EFE9938420D9CF8600E24E63 /* CSVParser.swift */,
-				EFF0F75B20D95E7900D7DEC1 /* DFS */,
+				EFF0F75B20D95E7900D7DEC1 /* D */,
 			);
-			path = Others;
+			path = mixed;
 			sourceTree = "<group>";
 		};
 		EFE9938120D9C95D00E24E63 /* hh */ = {
@@ -199,7 +199,7 @@
 			path = hh;
 			sourceTree = "<group>";
 		};
-		EFF0F75B20D95E7900D7DEC1 /* DFS */ = {
+		EFF0F75B20D95E7900D7DEC1 /* D */ = {
 			isa = PBXGroup;
 			children = (
 				EFF0F75920D95E7600D7DEC1 /* Wizard.swift */,
@@ -209,7 +209,7 @@
 				EF0D440020D9B72B0073E126 /* PreferenceList.swift */,
 				EFE9938220D9C98F00E24E63 /* SlidingGame.swift */,
 			);
-			path = DFS;
+			path = D;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

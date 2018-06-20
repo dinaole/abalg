@@ -397,8 +397,53 @@ class algTests: XCTestCase {
     }
     
     func testCSVParser() {
-        let input: [String] = [ "John,Smith,john.smith@gmail.com,Los Angeles,1", "\"Alexandra \"\"Alex\"\"\",Menendez,alex.menendez@gmail.com,Miami,1" ]
-        
+        let input: [String] = [ "John,Smith,john.smith@gmail.com,Los Angeles,1", "\"Alexandra, \"\"Alex\"\"\",Menendez,alex.menendez@gmail.com,Miami,1" ]
+        let expected: [String] = [
+            "John|Smith|john.smith@gmail.com|Los Angeles|1",
+            "Alexandra, \"Alex\"|Menendez|alex.menendez@gmail.com|Miami|1"
+        ]
+        let sol = CSVParser()
+        input.enumerated().forEach { (ind, i) in
+            XCTAssertEqual(expected[ind], sol.parse(i))
+        }
+    }
+    
+    func testMiniParser() {
+        let input = [
+            "[123,[-456,78,[9,-10],[[]],11,[]]]"
+        ]
+        let sol = MiniParser()
+        let ni = sol.deserialize(input[0])
+        XCTAssertEqual(2, ni.list.count)
+        XCTAssertEqual(123, ni.list[0].value)
+        XCTAssertEqual(-456, ((ni.list)[1].list)[0].value)
+        XCTAssertEqual(6, (ni.list)[1].list.count)
+        let tmpn = (ni.list)[1]
+        XCTAssertEqual(-10, ((tmpn.list)[2].list)[1].value)
+    }
+    
+    func testMenu() {
+        let input: [([Double], Double)] = [
+            ([0.02, 1.11, 2.22, 3.01, 4.02, 2.00, 5.03],7.03),
+            ([1.11, 0.01, 0.01, 1.09, 1.09, 0.03], 1.12)
+            ]
+        let expected = [
+            [[3.01, 4.02], [2.00, 5.03]],
+            [[0.01, 1.11], [0.11, 1.11], [0.03, 1.09], [0.03, 1.09]]
+            ]
+        let sol = MenuCombinationSum()
+        input.enumerated().forEach { (i, ele) in
+            print(sol.getCombos(input[i].0, input[i].1))
+        }
+    }
+    
+    func testMenu2() {
+        let sol2 = MenuCombinationSumDuplicate()
+        let input2: [([Double], Double)] = [
+            //([0.03, 0.04], 0.11),
+            ([0.02, 1.11], 1.17)
+        ]
+        print(sol2.getCombosCanDuplicate(input2[0].0, input2[0].1))
     }
     
 }

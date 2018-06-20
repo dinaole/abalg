@@ -1,5 +1,5 @@
 //
-//  MenuCombinationSum.swift
+//  PreferenceList.swift
 //  alg
 //
 //  Created by Yu, Huiting on 6/19/18.
@@ -8,6 +8,3 @@
 
 import Foundation
 
-class MenuCombinationSum {
-    
-}

@@ -446,4 +446,42 @@ class algTests: XCTestCase {
         print(sol2.getCombosCanDuplicate(input2[0].0, input2[0].1))
     }
     
+    func testPreferenceList() {
+        let input = [
+            [[2,3,5], [4,2,1], [4,1,5,6], [4,7]],
+            [[1,2,3], [4,3,1]]
+        ]
+        let expected = [
+            [4,2,7,1,3,5,6], // or [4, 2, 7, 3, 1, 5, 6]
+            []
+            
+        ]
+        let sol = PreferenceList()
+        print(sol.computeListBFS(input[0]))
+        print(sol.computeListBFS(input[1]))
+    }
+    
+    func testSlidingGame() {
+        
+    }
+    
+    func testfindMedian() {
+        let input: [[Int]] = [
+        [-3, -1, 1, 3, 5],
+        [-10, 1, 8, 10],
+        [-100, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24],
+        [-100, 2, 4, 6, 8, 10, 11, 14, 16, 18, 20, 22]
+        ]
+        let output = [
+            1.0,
+            4.5,
+            12.0,
+            10.5
+        ]
+        let sol = MedianIntegerInFile()
+        for (ind, ele) in input.enumerated() {
+            print(ind, ele)
+            XCTAssertLessThan(output[ind] - sol.findMedian(ele), 0.001)
+        }
+    }
 }

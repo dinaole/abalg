@@ -7,4 +7,7 @@
 //
 
 import Foundation
-//TODO
+
+class SlidingGame {
+    
+}

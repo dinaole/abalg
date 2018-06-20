@@ -9,15 +9,8 @@
 import Foundation
 /*
  edit distance
- 
- 
- 
- Accomodate
  Median Int
- 
- PreferenceList                                        3        (拓扑)
- MenuCombinationSum                        3        (DP/DFS)
- Puzzle                                                3        (Design+BFS)
+
  ___________________________________
  Done
  ___________________________________
@@ -50,7 +43,8 @@ import Foundation
   RoundedNumber                                3
  WizardsDistance                                3        (BFS)
  FloodFill                                                3        (BFS/DFS)
-
+ MenuCombinationSum                        3        (DP/DFS)
+ PreferenceList                                        3        (拓扑)
  
  
  
@@ -62,7 +56,7 @@ Miscs __________________________________________________________________
  HilbertCurve                                        3        (DFS)
 
  BoggleGame                                        3        (DFS+Trie)
-
+ Puzzle                                                3        (Design+BFS)
  
  ____________________________
  DP

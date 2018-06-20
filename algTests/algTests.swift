@@ -339,4 +339,66 @@ class algTests: XCTestCase {
         }
 
     }
+    
+    func testPourWater() {
+        let input = [
+            ([2,1,1,2,1,2,2], 4, 3),
+            ([2,1,1,2,1,2,2], 6, 3),
+            ([3,2,2], 3, 0),
+            ([3,2,2,8,0], 2, 0),
+            ([3,2,2,8,0], 4, 0)
+        ]
+        let expected = [
+            [2,2,2,3,2,2,2],
+            [2,3,3,3,2,2,2],
+            [4,3,3],
+            [3,3,3,8,0],
+            [4,4,3,8,0]
+            
+        ]
+        let sol = PourWater()
+        input.enumerated().forEach { (i, arg1) in
+            
+            let (input, V, K) = arg1
+            print(input, V, K)
+            XCTAssertEqual(expected[i], sol.pourWater(input, V, K))
+        }
+    }
+    
+    func testWizards() {
+        let input: [([[Int]], Int, Int)] = [
+            ([[1,5,9], [2,3,9], [4], [], [], [9], [], [], [], []], 0, 9),
+            ([[1,2], [2], []], 0, 2),
+            ([[1], [0], []], 0, 2)
+        ]
+        let expected: [[Int]] = [
+            [0,5,9],
+            [0,1,2],
+            [],
+        ]
+        
+        let sol = Wizard()
+        XCTAssertEqual(expected[0], sol.wizardByDFS(input[0].0, input[0].1, input[0].2))
+    }
+    func testFloodFill() {
+   
+        let input = [
+        "WWWLLLW",
+        "WWLLLWW",
+        "WLLLLWW"
+        ]
+        let expected = [
+           "OOOLLLW",
+           "OOLLLWW",
+           "OLLLLWW"
+        ]
+        XCTAssertEqual(expected, FloodFill().floodFillDFS(input, 1, 1))
+        XCTAssertEqual(expected, FloodFill().floodFillBFS(input, 1, 1))
+    }
+    
+    func testCSVParser() {
+        let input: [String] = [ "John,Smith,john.smith@gmail.com,Los Angeles,1", "\"Alexandra \"\"Alex\"\"\",Menendez,alex.menendez@gmail.com,Miami,1" ]
+        
+    }
+    
 }
